@@ -1,10 +1,10 @@
 const URL_GASTOS = "https://api.mercadopago.com/v1/payments/search";
-const ACCESS_TOKEN = "...";
+const ACCESS_TOKEN =
+  "APP_USR-8200924476094507-020820-e640332cf321e57e55149cbd2dc60280-1945113621";
 
-// Parâmetros para filtrar os pagamentos aprovados
 const params = new URLSearchParams({
   status: "approved",
-  limit: 50,
+  limit: 10,
 });
 
 const urlComParams = `${URL_GASTOS}?${params.toString()}`;
