@@ -1,10 +1,10 @@
+require("dotenv").config();
 const URL_GASTOS = "https://api.mercadopago.com/v1/payments/search";
-const ACCESS_TOKEN = "...";
+const ACCESS_TOKEN = process.env.MP_ACCESS_TOKEN;
 
-// Parâmetros para filtrar os pagamentos aprovados
 const params = new URLSearchParams({
   status: "approved",
-  limit: 50,
+  limit: 10,
 });
 
 const urlComParams = `${URL_GASTOS}?${params.toString()}`;
